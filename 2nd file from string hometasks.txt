@@ -1,0 +1,309 @@
+﻿namespace secondRep_by_VStudio
+{
+    internal class Program
+    {
+
+
+        // 1st
+        public static bool catDog(string str)
+        {
+            var temp = "";
+            var catCounter = 0;
+            var dogCounter = 0;
+            for (var i = 0; i < str.Length - 2; i++)
+            {
+                temp = str.Substring(i, 3);
+                if (temp == "cat")
+                {
+                    catCounter++;
+                }
+                else if (temp == "dog")
+                {
+                    dogCounter++;
+                }
+            }
+            return catCounter == dogCounter;
+        }
+
+        // 2rd
+        public static int countCode(string firstWord)
+        {
+            var word = 0;
+            for (var i = 0; i < firstWord.Length; i++)
+            {
+                if (firstWord[i] == 'c' && firstWord[i + 1] == 'o' && firstWord[i + 3] == 'e')
+                {
+                    word++;
+                }
+            }
+            return word;
+
+        }
+
+
+        // 3rd
+        public static bool endOther(string firstWord, string secondWord)
+        {
+            firstWord = firstWord.ToUpper();
+            secondWord = secondWord.ToUpper();
+
+            if (firstWord.Length > secondWord.Length)
+            {
+                return firstWord.EndsWith(secondWord);
+            }
+            else
+            {
+                return secondWord.EndsWith(firstWord);
+            }
+
+
+
+        }
+
+
+        // 4th
+        public static bool xyz(string str)
+        {
+            bool check = false;
+            for (var i = 0; i <= str.Length - 3; i++)
+            {
+                if (str.Substring(i, 3) == "xyz")
+                {
+                    if (i == 0 || str[i - 1] != '.')
+                    {
+                        check = true;
+                    }
+                }
+            }
+            return check;
+        }
+
+
+        // 5th
+        public static string mixString(string s1, string s2)
+        {
+            var temp = "";
+            if (s1.Length > s2.Length)
+            {
+                for (var i = 0; i < s1.Length; i++)
+                {
+                    if (s1.Length > i)
+                    {
+                        temp += s1[i];
+                    }
+                    if (s2.Length > i)
+                    {
+                        temp += s2[i];
+                    }
+                }
+            }
+            else
+            {
+                for (var i = 0; i < s2.Length; i++)
+                {
+                    if (s2.Length > i)
+                    {
+                        temp += s2[i];
+                    }
+                    if (s1.Length > i)
+                    {
+                        temp += s1[i];
+                    }
+                }
+            }
+            return temp;
+        }
+
+
+
+        // 6th
+        public static string repeatEnd(string str, int number)
+        {
+            var temp = str.Substring(str.Length - number);
+            var result = "";
+            for (var i = 1; i <= number; i++)
+            {
+                result += temp;
+            }
+            return result;
+        }
+
+
+
+
+        // 7th
+        public static string repeatFront(string str, int number)
+        {
+            var result = "";
+            for (var i = number; i >= 0; i--)
+            {
+                result += str.Substring(0, i);
+            }
+            return result;
+        }
+
+
+
+        // 8th
+        public static string repeatSeparator(string word, string sep, int number)
+        {
+            var result = "";
+            for (var i = 0; i < number; i++)
+            {
+                result += word;
+                result += sep;
+            }
+            return result = result.Substring(0, result.Length - sep.Length);
+        }
+
+
+
+        // 9th
+        public static bool prefixAgain(string str, int number)
+        {
+            var temp = str.Substring(0, number);
+
+            var check = "";
+
+            for (var i = number; i <= str.Length - number; i++)
+            {
+                check = str.Substring(i, number);
+                if (temp == check)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+
+
+        // 10th
+        public static string xyzMiddle(string str)
+        {
+            var temp = String.Empty;
+
+            for(var i = 0; i < str.Length - 3; i++)
+            {
+                temp = str.Substring(i, 3);
+
+                if(temp == "xyz")
+                {
+
+                }
+            }
+        }
+
+
+
+
+
+        // 11th
+        public static string getSandwich(string str)
+        {
+
+            int soz = str.IndexOf("bread"), k = 0;
+            string temp, res = "";
+            for (int i = soz + 5; i < str.Length; ++i)
+            {
+                temp = str.Substring(i, 5);
+                if (temp == "bread")
+                {
+                    k = i;
+                    break;
+                }
+
+            }
+            for (int i = soz + 5; i < k; ++i)
+            {
+                res += str[i];
+            }
+            return res;
+
+
+        }
+
+
+
+        // 12nd
+        public static bool sameStarChar(string str)
+        {
+            bool check = false;
+            for (var i = 0; i < str.Length; i++)
+            {
+                if (str[i] == '*' && str[i - 1] == str[i + 1])
+                {
+                    check = true;
+                }
+            }
+            return check;
+        }
+
+
+        // 13rd
+        public static string zipZop(string str)
+        {
+            for (var i = 0; i < str.Length; i++)
+            {
+                if (str[i] == 'z' && str[i + 2] == 'p')
+                {
+                    str = str.Remove(i + 1, 1);
+                }
+            }
+            return str;
+        }
+
+
+
+
+        // 15th
+
+
+
+
+
+
+        static void Main(string[] args)
+        {
+
+            Console.Write("Enter word >> ");
+            var firstSentence = Console.ReadLine();
+
+            var result = String.Empty;
+
+            foreach (var sign in firstSentence)
+            {
+                if (Char.IsUpper(sign) is true)
+                {
+                    result += Char.ToLower(sign);
+                }
+                else if (Char.IsLower(sign))
+                {
+                    result += Char.ToUpper(sign);
+                }
+            }
+            Console.Write(result);
+
+
+            /**
+            Console.Write("Enter 2nd word >> ");
+            var secondSentence = Console.ReadLine();
+            
+            
+            /**
+            Console.Write("Enter number >> ");
+            var digit = Convert.ToInt32(Console.ReadLine());
+            */
+            /**
+            Console.WriteLine(wordEnds(firstSentence, secondSentence));
+            */
+
+
+        }
+
+
+
+
+    }
+}
