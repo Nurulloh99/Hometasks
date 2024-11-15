@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace _1._5_Hometasks_List___Array
 {
     internal class Program
@@ -1144,8 +1146,157 @@ namespace _1._5_Hometasks_List___Array
 
 
 
+
+
+
+
+        // _________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+        //          25th task
+        /**
+        static void Main(string[] arg)
+        {
+            Console.Write(" Enter amount >> ");
+            var amount = int.Parse(Console.ReadLine());
+            var result = FillAndOuter(amount);
+            SummaryOfTheBiggestTwoElements(result);
+        }
+
+
+        public static void SummaryOfTheBiggestTwoElements(List<int> numbers)
+        {
+            var maxx = numbers[0] + numbers[1];
+            var firstIndex = 0;
+            var secondIndex = 1;
+
+            for(var i = 0; i < numbers.Count-1; i++)
+            {
+                var variable = numbers[i] + numbers[i + 1];
+
+                if(variable > maxx)
+                {
+                    maxx = variable;
+                    firstIndex = numbers[i];
+                    secondIndex = numbers[i + 1];
+                }
+            }
+            Console.WriteLine($" Eng kotta juftlikni yigindisi >> {maxx}");
+            Console.WriteLine($" Eng kotta 1 chi juftlik >> {firstIndex}");
+            Console.WriteLine($" Eng kotta 2 chi juftlik >> {secondIndex}");
+        }
+        */
+
+
+
+
+
+
+
+
+
+
+        // _________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+        //          26th task
+        /**
+        static void Main(string[] arg)
+        {
+            Console.Write(" Enter amount of List >> ");
+            var amount = int.Parse(Console.ReadLine());
+            var result = FillAndOuter(amount);
+            TheBiggestLeftElements(result);
+        }
+
+        public static void TheBiggestLeftElements(List<int> numbers)
+        {
+            var counter = 0;
+
+            for(var i = 0; i < numbers.Count-1; i++)
+            {
+                if (numbers[i] < numbers[i + 1])
+                {
+                    counter++;
+                }
+            }
+            Console.WriteLine($" Result >> {counter}");
+        }
+        */
+
+
+
+
+
+
+
+
+
+
+        // _________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+        //          27th task
+        /**
+        static void Main(string[] arg)
+        {
+            Console.Write(" Enter first amount of List >> ");
+            var amount = int.Parse(Console.ReadLine());
+            var result = FillingFirstArrayAndOuter(amount);
+            Console.Write(" Enter second List's numbers:");
+            Console.WriteLine();
+            var secondResult = FillingSecondArrayAndOuter(amount);
+            CollectTwoListInThird(result, secondResult);
+        }
+
+
+       public static void CollectTwoListInThird(List<int> firstDigit, List<int> secondDigit)
+        {
+            var thisrDigit = new List<int>();
+
+            for(var i = 0; i < firstDigit.Count; i++)
+            {
+                thisrDigit.Add(firstDigit[i] * secondDigit[i]);
+            }
+            Console.WriteLine();
+            Console.Write("Uchinchi yangi massiv elementlari >> ");
+
+            foreach (var num in thisrDigit)
+            {
+                Console.Write($"{num} ");
+            }
+            Console.WriteLine();
+        }
+
+
         // Filling all List elements
-        public static List<int> FillAndOuter(int number)
+        public static List<int> FillingFirstArrayAndOuter(int number)
         {
             var collection = new List<int>();
 
@@ -1156,6 +1307,152 @@ namespace _1._5_Hometasks_List___Array
             }
             return collection;
         }
+
+
+        public static List<int> FillingSecondArrayAndOuter(int number)
+        {
+            var collection = new List<int>();
+
+            for(var i = 0; i < number; i++)
+            {
+                var summa = int.Parse(Console.ReadLine());
+                collection.Add(summa);
+            }
+            return collection;
+        }
+        */
+
+
+
+
+
+
+
+
+        // _________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+        //          28th task
+        /**
+        static void Main(string[] arg)
+        {
+            Console.Write(" Enter amount of List >> ");
+            var amount = int.Parse(Console.ReadLine());
+            var result = FillingFirstArrayAndOuter(amount);
+            DollarCounter(result);
+        }
+
+        public static void DollarCounter(List<string> str)
+        {
+            var counter = 0;
+
+            for(var i = 0; i < str.Count; i++)
+            {
+                if (str[i].StartsWith('$') && Char.IsLetter(str[i][1]))
+                {
+                    counter++;
+                }
+            }
+            Console.WriteLine($"Result >> {counter}");
+        }
+
+        public static List<string> FillingFirstArrayAndOuter(int str)
+        {
+            var collection = new List<string>();
+
+            for (var i = 0; i < str; i++)
+            {
+                var digits = Console.ReadLine();
+                collection.Add(digits);
+            }
+            return collection;
+        }
+        */
+
+
+
+
+
+
+
+
+
+        // _________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+        //          29th task
+        /**
+        static void Main(string[] arg)
+        {
+            Console.Write(" Enter amount of List >> ");
+            var amount = int.Parse(Console.ReadLine());
+            var result = FillingFirstArrayAndOuter(amount);
+            DollarCounter(result);
+        }
+
+        public static void DollarCounter(List<string> str)
+        {
+            var counter = 0;
+            var result = new List<string>();
+
+            for (var i = 0; i < str.Count; i++)
+            {
+
+                if (str[i] == str[i].ToUpper())
+                {
+                    result.Add(str[i]);
+                }
+                
+            }
+            Console.WriteLine();
+
+            foreach (var s in result)
+            {
+                Console.WriteLine(s);
+            }
+
+        }
+
+        public static List<string> FillingFirstArrayAndOuter(int str)
+        {
+            var collection = new List<string>();
+
+            for (var i = 0; i < str; i++)
+            {
+                var digits = Console.ReadLine();
+                collection.Add(digits);
+            }
+            return collection;
+        }
+        */
+
+
+
+
+
+
+
+
+
+        // _________________________________________________________________________________________
+
+
+
+
 
         public static void DisplayToConsole(List<int> outer)
         {
