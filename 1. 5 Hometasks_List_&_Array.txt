@@ -1454,6 +1454,230 @@ namespace _1._5_Hometasks_List___Array
 
 
 
+
+
+        //          30th task
+        /** 
+        static void Main(string[] arg)
+        {
+            Console.Write("Enter amount : ");
+            var amount = int.Parse(Console.ReadLine());
+            var result = FillGetAnReturn(amount);
+            firstEvenNumberAddedOthers(result);
+        }
+
+
+        public static void firstEvenNumberAddedOthers(List<int> numbers)
+        {
+            var evenDigit = 0;
+
+            Console.Write("Result >> ");
+
+            for(var i = 0; i < numbers.Count; i++)
+            {
+                if (numbers[i] % 2 == 0)
+                {
+                    evenDigit = numbers[i];
+                    break;
+                }
+            }
+
+            for(var i = 0; i < numbers.Count; i++)
+            {
+                if (numbers[i] % 2 == 0)
+                {
+                    numbers[i] += evenDigit;
+                }
+                Console.Write($"{numbers[i]} ");
+            }
+            Console.WriteLine();
+        }
+        */
+
+
+
+
+
+
+
+
+
+
+        // _________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+        //          31th task
+        /**
+        static void Main(string[] arg)
+        {
+            Console.Write("Enter amount >> ");
+            var amount = int.Parse(Console.ReadLine());
+            var result = FillGetAnReturn(amount);
+            LatestOddNUmbersAddToOthers(result);
+            DisplayToConsole(result);
+        }
+
+        public static void LatestOddNUmbersAddToOthers(List<int> numbers)
+        {
+            var oddNumber = 0;
+
+            for(var i = numbers.Count-1; i >= 0; i--)
+            {
+                if (numbers[i] % 2 != 0)
+                {
+                    oddNumber = numbers[i];
+                    break;
+                }
+            }
+
+            Console.Write("Result >> ");
+
+            for(var i = 0; i < numbers.Count; i++)
+            {
+                if (numbers[i] % 2 != 0)
+                {
+                    numbers[i] += oddNumber;
+                }
+            }
+        }
+
+        public static void DisplayToConsole(List<int> outer)
+        {
+            Console.Write(" Result >> ");
+
+            for (var i = 0; i < outer.Count; i++)
+            {
+                Console.Write($"{outer[i]} ");
+            }
+        }
+        */
+
+
+
+
+
+
+
+
+
+        // _________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+        //          32nd task
+        /**
+        static void Main(string[] arg)
+        {
+            Console.Write("Enter amount >> ");
+            var amount = int.Parse(Console.ReadLine());
+            var result = FillGetAnReturn(amount);
+            MakeTheSmallestEvenNumbers(result);
+        }
+
+        public static void MakeTheSmallestEvenNumbers(List<int> evenNum)
+        {
+            var smallNumber = int.MaxValue;
+
+            for (var i = 0; i < evenNum.Count; i++)
+            {
+                if(evenNum[i] % 2 == 0)
+                {
+                    if(smallNumber > evenNum[i])
+                    {
+                        smallNumber = evenNum[i];
+                    }
+                }
+            }
+            Console.WriteLine($"Eng kichik juft element >> {smallNumber}");
+        }
+        */
+
+
+
+
+
+
+
+
+        // _________________________________________________________________________________________
+
+
+
+
+
+
+
+
+        //          33rd task
+        /**
+        static void Main(string[] arg)
+        {
+            Console.Write("Enter 1st List amount >> ");
+            var amount = int.Parse(Console.ReadLine());
+            var firstList = FillGetAnReturn(amount);
+            Console.WriteLine("Enter 2nd List's digits");
+            var secondList = FillGetAnReturn(amount);
+            MakeThirdList(firstList, secondList);
+        }
+
+
+        public static void MakeThirdList(List<int> firstSpecialList, List<int> secondSpecialList)
+        {
+            var addList = new List<int>();
+
+            for(var i = 0; i < firstSpecialList.Count; i++)
+            {
+                addList.Add(Math.Max(firstSpecialList[i], secondSpecialList[i]));
+            }
+
+            Console.Write($"Result >> ");
+
+            foreach(var num in addList)
+            {
+                Console.Write($"{num} ");
+            }
+            Console.WriteLine();
+        }
+
+        public static List<int> FillGetAnReturn(int numbers)
+        {
+            var collection = new List<int>();
+
+            for(var i = 0; i < numbers; i++)
+            {
+                var digit = int.Parse(Console.ReadLine());
+                collection.Add(digit);
+            }
+            return collection;
+        }
+        */
+
+
+
+
+
+
+
+        // _________________________________________________________________________________________
+
+
+
+
         public static void DisplayToConsole(List<int> outer)
         {
             Console.Write(" Result >> ");
