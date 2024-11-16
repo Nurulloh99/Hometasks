@@ -1,3 +1,4 @@
+using System;
 using System.Globalization;
 
 namespace _1._5_Hometasks_List___Array
@@ -1674,6 +1675,71 @@ namespace _1._5_Hometasks_List___Array
 
 
         // _________________________________________________________________________________________
+
+
+
+
+
+
+
+
+        //          34th task
+        /**
+        static void Main(string[] arg)
+        {
+            Console.Write("Enter amount >> ");
+            var amount = int.Parse(Console.ReadLine());
+            var firstList = FillGetAndReturn(amount);
+            MakeANewSecondList(firstList);
+        }
+
+        public static void MakeANewSecondList(List<int> additionalList)
+        {
+            Console.WriteLine();
+            var newList = new List<int>();
+            var counter = 0;
+
+            foreach (var num in additionalList)
+            {
+                if(num % 2 == 0)
+                {
+                    newList.Add(num);
+                    counter++;
+                }
+            }
+            Console.Write("Result >> ");
+
+            foreach (var conOut in newList)
+            {
+                Console.Write($"{conOut} ");
+            }
+            Console.WriteLine();
+            Console.WriteLine($"Amount elements of the second List >> {counter}");
+            Console.WriteLine();
+        }
+
+        public static List<int> FillGetAndReturn(int numbers)
+        {
+            var collection = new List<int>();
+
+            for(var i = 0; i < numbers; i++)
+            {
+                var digit = int.Parse(Console.ReadLine());
+                collection.Add(digit);
+            }
+            return collection;
+        }
+        */
+
+
+
+
+
+
+
+        // _________________________________________________________________________________________
+
+
 
 
 
